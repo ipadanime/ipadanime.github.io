@@ -8,49 +8,17 @@
 <meta name="description" content="A Time Capsule Project">
 <meta name="author" content="IPadAnime">
 <link rel="shortcut icon" href="#" type="image/x-icon"/>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
 <link rel="canonical" href="https://ipadanime.github.io">
+<style>
+.wrapper{height:100%;width:260px;margin:0 auto;text-align:center}.wrapper:before{content:"";display:inline-block;height:100%;vertical-align:middle;margin-left:-2em}.wrapper div{vertical-align:middle;display:inline-block;margin-left:2em}.wrapper div h1{margin:0;padding:20px 0;display:block;font-size:200%}.wrapper div p{margin:0;padding-bottom:20px;display:block;text-align:justify;line-height:1.2;font-size:95%}
+</style>
 <script>
 var host = "ipadanime.github.io";
 if ((host == window.location.host) && (window.location.protocol != "https:"))
     window.location.protocol = "https";
 </script>
-<style>
-.wrapper {
-  height: 100%;
-  width: 260px;
-  margin: 0 auto;
-  text-align: center;
-}
-.wrapper:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-left: -2em;
-}
-.wrapper div {
-  vertical-align: middle;
-  display: inline-block;
-  margin-left: 2em;
-}
-.wrapper div h1 {
-  margin: 0;
-  padding: 20px 0;
-  display: block;
-  font-size: 200%;
-}
-.wrapper div p {
-  margin: 0;
-  padding-bottom: 20px;
-  display: block;
-  text-align: justify;
-  line-height: 1.2;
-  font-size: 95%;
-}
-</style>
 </head>
 <body>
 <div class="wrapper">
@@ -58,5 +26,17 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 <h1>Hello World!</h1>
 </div>
 </div>
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "https://code.jquery.com/jquery-2.1.4.min.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
 </body>
 </html>
