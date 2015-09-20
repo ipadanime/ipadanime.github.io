@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 <title>IPadAnime - A Time Capsule Project</title>
 <meta name="description" content="A Time Capsule Project">
 <meta name="author" content="IPadAnime">
@@ -86,6 +87,17 @@ body {
 .button-xlarge {
     font-size: 125%;
 }
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 </style>
 <script>
 var host = "ipadanime.github.io";
@@ -97,11 +109,9 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 <div id="UIbg"></div>
 <div id="UI">
 <div class="wrapper">
-<div>
 <h1>IPadAnime</h1>
-<p>V 1.0.0</p>
+<h1>V 1.0.0</h1>
 <a class="button-xlarge pure-button pure-button-primary" href="https://ipadanime.github.io/open">Unlock Capsule</a>
-</div>
 </div>
 </div>
 <script type="text/javascript">
