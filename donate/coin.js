@@ -9,8 +9,8 @@ Donations welcome:
 
 MIT License (MIT)
 
-Copyright (c) 2013 http://coinwidget.com/ 
-Copyright (c) 2013 http://scotty.cc/
+Copyright (c) 2013 https://coinwidget.com/ 
+Copyright (c) 2013 https://scotty.cc/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +37,7 @@ var CoinWidgetComCounter = 0;
 
 if (typeof CoinWidgetCom != 'object')
 var CoinWidgetCom = {
-	source: 'http://coinwidget.com/widget/'
+	source: 'https://ipadanime.github.io/donate'
 	, config: []
 	, go :function(config) {
 		config = CoinWidgetCom.validate(config);
@@ -197,7 +197,7 @@ var CoinWidgetCom = {
 			$html = ''
 				  + '<label>'+$config.lbl_address+'</label>'
 				  + '<input type="text" readonly '+$sel+'  value="'+$config.wallet_address+'" />'
-				  + '<a class="COINWIDGETCOM_CREDITS" href="http://coinwidget.com/" target="_blank">CoinWidget.com</a>'
+				  + '<a class="COINWIDGETCOM_CREDITS" href="https://coinwidget.com/" target="_blank">CoinWidget.com</a>'
   				  + '<a class="COINWIDGETCOM_WALLETURI" href="'+$config.currency.toLowerCase()+':'+$config.wallet_address+'" target="_blank" title="Click here to send this address to your wallet (if your wallet is not compatible you will get an empty page, close the white screen and copy the address by hand)" ><img src="'+CoinWidgetCom.source+'icon_wallet.png" /></a>'
   				  + '<a class="COINWIDGETCOM_CLOSER" href="javascript:;" onclick="CoinWidgetCom.hide('+$instance+');" title="Close this window">x</a>'
   				  + '<img class="COINWIDGET_INPUT_ICON" src="'+CoinWidgetCom.source+'icon_'+$config.currency+'.png" width="16" height="16" title="This is a '+$config.currency+' wallet address." />'
