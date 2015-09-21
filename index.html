@@ -65,7 +65,7 @@ body {
 #UIbg, #UI {
     position: absolute;
     width: 700px;
-    height: 300px;
+    height: 400px;
     top: 50%;
     left: 50%;
     margin-top: -200px;
@@ -111,21 +111,28 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 <a class="button-xlarge pure-button pure-button-primary" href="https://ipadanime.github.io/open">Unlock Capsule</a>
 <br>
 <br>
-<script src="https://ipadanime.github.io/donate/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-	wallet_address: "18ZtkDrboPgkSLJ3Vp99H12np48fwFWBY6"
-	, currency: "bitcoin"
-	, counter: "count"
-	, alignment: "ac"
-	, qrcode: true
-	, auto_show: false
-	, lbl_button: "Donate"
-	, lbl_address: "My Bitcoin Address:"
-	, lbl_count: "donations"
-	, lbl_amount: "BTC"
-});
-</script>
+<!--Donate-->
+<div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
+     data-address="18ZtkDrboPgkSLJ3Vp99H12np48fwFWBY6"
+     data-shared="false">
+    <div class="blockchain stage-begin">
+        <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
+    </div>
+    <div class="blockchain stage-loading" style="text-align:center">
+        <img src="https://blockchain.info/Resources/loading-large.gif"/>
+    </div>
+    <div class="blockchain stage-ready">
+         <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
+         <p align="center" class="qr-code"></p>
+    </div>
+    <div class="blockchain stage-paid">
+         Donation of <b>[[value]] BTC</b> Received. Thank You.
+    </div>
+    <div class="blockchain stage-error">
+        <font color="red">[[error]]</font>
+    </div>
+</div>
+<!--Donate-->
 </div>
 </div>
 </div>
@@ -141,5 +148,16 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script>
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "https://blockchain.info/Resources/wallet/pay-now-button.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
 </body>
 </html>
