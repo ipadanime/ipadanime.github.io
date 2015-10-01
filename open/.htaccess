@@ -1,3 +1,19 @@
+## DDOS PROTECT ##
+RewriteEngine on
+RewriteCond %{QUERY_STRING} ^([0-9]+)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+)(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^([0-9]+\.[0-9])(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+\.[0-9])(.*)$ [NC]
+RewriteRule ^(.*)$ http://%{REMOTE_ADDR} [L]
+## DDOS PROTECT ##
+
+## SECURE ##
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+## SECURE ##
+
 ## EXPIRES CACHING ##
 ExpiresActive On
 ExpiresDefault A604800 # 1 week
@@ -29,7 +45,7 @@ Options -ExecCGI
 ## NO SCRIPTS ##
 
 ## DOS PROTECT ##
-LimitRequestBody 10240000
+LimitRequestBody 10000000
 ## DOS PROTECT ##
 
 ## HIDE EXTENSIONS ##
@@ -46,17 +62,10 @@ RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
-RewriteRule ^.*$ http://english-61925045732.spampoison.com [R,L]
+RewriteRule ^.*$ http://wwww.spampoison.com [R,L]
 ## SPAM POISON ##
 
 ## NO DIRECTORY BROWSING ##
 Options All -Indexes
 IndexIgnore *
 ## NO DIRECTORY BROWSING ##
-
-## SECURE ##
-<Files .htaccess>
- order allow,deny
- deny from all
-</Files>
-## SECURE ##
